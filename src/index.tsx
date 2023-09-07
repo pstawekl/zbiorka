@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import './index.css';
+import './Styles/style.scss';
 import reportWebVitals from './reportWebVitals';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import MenuNavbar from './Components/menuNavbar';
@@ -16,7 +16,7 @@ root.render(
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<About />} />
-        <Route path='/contact' element={<Contact />}/>
+        <Route path='/contact' element={<Contact />} />
       </Routes>
     </BrowserRouter>
   </div>

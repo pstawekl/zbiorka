@@ -1,0 +1,67 @@
+@import 'variables.scss';
+
+body {
+    margin: 0;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+        'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+        sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+    font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+        monospace;
+}
+
+.ia-page {
+    height: 100vh;
+    width: 100vw;
+
+    .menu-navbar {
+        display: flex;
+        flex-wrap: nowrap;
+        justify-content: center;
+        background-color: $color-site-primary;
+        max-height: 50px;
+        width: 100%;
+        height: auto;
+
+        ul {
+            display: flex;
+            height: 100%;
+            margin: 0;
+
+            li {
+                display: flex;
+                height: 100%;
+            }
+        }
+
+        .logo {
+            height: 100%;
+            display: flex;
+
+            a {
+                text-decoration: none;
+                color: $color-text-neutral-2;
+                padding: 10px 20px;
+            }
+        }
+
+        .nav-link {
+            height: 100%;
+            display: flex;
+            margin: auto;
+            padding: 10px 20px;
+            text-decoration: none;
+            color: $color-text-neutral-2;
+        }
+
+        .nav-link:hover {
+            background-color: $color-menu-item-hover;
+        }
+
+    }
+
+}

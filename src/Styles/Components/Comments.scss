@@ -1,0 +1,77 @@
+@import '../variables.scss';
+
+.ia-fundraising-page__comments {
+    margin: auto;
+    max-width: 100%;
+
+    &-add {
+        display: flex;
+        flex-wrap: wrap;
+        margin: 20px 0;
+        max-width: 100%;
+
+        &-header {
+            width: 100%
+        }
+
+        &-author {
+            display: flex;
+            margin-bottom: 10px;
+            border-radius: 5px;
+            border: 1px solid $color-border;
+            padding: 5px 10px;
+        }
+
+        &-textarea {
+            display: flex;
+            width: 100%;
+            min-width: 98%;
+            margin-bottom: 10px;
+            min-height: 50px;
+            border-radius: 5px;
+            border: 1px solid $color-border;
+            padding: 10px;
+        }
+
+        &-actions {
+            display: flex;
+            justify-content: end;
+            margin-left: auto;
+            margin-right: 0;
+        }
+    }
+}
+
+.ia-comments {
+    width: 100%;
+}
+
+.ia-comment {
+    display: flex;
+    flex-direction: column;
+    border-radius: 5px;
+    border: 1px solid $color-border;
+    background-color: $color-comment-background;
+    margin: 20px 0;
+    padding: 10px 30px;
+
+    &-header {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 10px;
+
+        &-name {
+            font-weight: bold;
+        }
+
+        &-date {
+            font-size: 0.8em;
+        }
+    }
+
+    &-content {
+        padding: 10px 0;
+    }
+}

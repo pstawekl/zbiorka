@@ -17,6 +17,7 @@ code {
 .ia-page {
     height: 100vh;
     width: 100vw;
+    overflow: scroll;
 
     .menu-navbar {
         display: flex;
@@ -64,4 +65,27 @@ code {
 
     }
 
+    .ia-fundraising-page {
+        padding: 20px 10%;
+    }
+
+    .ia-button-primary {
+        display: flex;
+        background-color: $color-site-primary;
+        border: 1px solid $color-site-primary;
+        border-radius: 5px;
+        color: $color-text-neutral-2;
+        padding: 5px 30px;
+        transition: 0.6s;
+
+        &:hover {
+            background-color: $color-site-primary-hover;
+        }
+
+        &.disabled {
+            background-color: gray;
+            border: 1px solid gray;
+            color: $color-text-neutral-2;
+        }
+    }
 }

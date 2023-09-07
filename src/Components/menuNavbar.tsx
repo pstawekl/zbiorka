@@ -1,4 +1,3 @@
-import react from 'react';
 import { TMenuUtils } from '../Utils/MenuUtils';
 
 export default function MenuNavbar() {

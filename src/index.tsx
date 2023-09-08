@@ -2,7 +2,7 @@ import ReactDOM from 'react-dom/client';
 import './Styles/style.scss';
 import reportWebVitals from './reportWebVitals';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
-import MenuNavbar from './Components/MenuNavbar';
+import MenuNavbar from './Components/menuNavbar';
 import Home from './Views/Home';
 import About from './Views/About';
 import Contact from './Views/Contact';

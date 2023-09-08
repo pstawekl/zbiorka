@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import { Fundraising, FundraisingsUtils } from "../../Utils/FundraisingUtils";
 import ProgressBar from "@ramonak/react-progress-bar";
 import { Comment, CommentsUtils } from "../../Utils/CommentsUtils";
-import "../../Styles/Components/Comments.scss";
+import "../../Styles/Components/comments.scss";
 import DynamicCommentRenderer from "../Comments/DynamicCommentRenderer";
 
 export default function FundraisingPage() {

@@ -23,7 +23,7 @@ export default function DynamicFundraisingsCardsRenderer(props: DynamicFundraisi
                                 <img src={fundraising.imageSrc} alt={`Zdjęcie dla zbiórki ${fundraising.title}`} />
                             </div>
                             <div className={TAGNAME + "__progress-bar"}>
-                                <ProgressBar completed={fundraising.currentAmount / fundraising.goal * 100} />
+                                <ProgressBar completed={fundraising.currentAmount / fundraising.goal * 100} bgColor='#ede853' />
                             </div>
                             <div className={TAGNAME + "__fundraising-goal"}>
                                 <p>Cel: {fundraising.goal} zł</p>

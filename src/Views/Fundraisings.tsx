@@ -1,5 +1,6 @@
 import DynamicFundraisingsCardsRenderer from "../Components/Fundraising/DynamicFundraisingsCardsRenderer";
 import { Fundraising } from "../Utils/FundraisingUtils";
+import '../Styles/Components/fundraisings.scss';
 
 interface FundraisingsProps {
     fundraisingList: Fundraising[];
@@ -12,8 +13,8 @@ export default function Fundraisings(props: FundraisingsProps) {
     return (
         <div className={TAGNAME}>
             <div className={TAGNAME + "__header"}>
-                <h1>Aktualne zbiórki</h1>
-                <div className={TAGNAME + "__fundraisings-count"}>{props.fundraisingList.length}</div>
+                <h3>Aktualne zbiórki</h3>
+                <div className={TAGNAME + "__fundraisings-count" + (props.fundraisingList.length == 0 ? " disabled" : "")}>{props.fundraisingList.length}</div>
             </div>
             <div className={TAGNAME + "__content"}>
                 <DynamicFundraisingsCardsRenderer fundraisings={props.fundraisingList} />

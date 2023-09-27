@@ -9,8 +9,8 @@ export default function Home() {
         <div className={TAGNAME}>
             <div className={TAGNAME + "__banner"}>              
                 <span>
-                    <h1>title banneru</h1>
-                    <h3>subtitle banneru</h3>
+                    <h1>Wspólnie dla Pokoju: Pomoc Ofiarom Wojny</h1>
+                    <h3>Twój wkład może odmienić życie osób dotkniętych konfliktami</h3>
                 </span>
             </div>
             <div className={TAGNAME + "__content"}>

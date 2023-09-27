@@ -26,4 +26,26 @@ export class TMenuUtils {
             name: 'contact-site'
         }
     ];
+
+    //write function whose change background color of menu div on scroll event
+    public static changeMenuBackgroundOnScroll() {
+        const menu = document.getElementsByClassName('menu-navbar')[0];
+        const menuItems = document.getElementsByClassName('nav-link');
+        const menuItemsArray = Array.from(menuItems);
+
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 0) {
+                menu.classList.add('menu-scroll');
+                menuItemsArray.forEach((item) => {
+                    item.classList.add('menu-scroll');
+                });
+            } else {
+                menu.classList.remove('menu-scroll');
+                menuItemsArray.forEach((item) => {
+                    item.classList.remove('menu-scroll');
+                });
+            }
+        });
+    }
+
 }

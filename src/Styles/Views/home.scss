@@ -1,19 +1,32 @@
-@import '../variables.scss';
+@import "../variables.scss";
 
 .ia-home-page {
     &__banner {
         overflow: hidden;
         height: 800px;
-        background-image: url('../../Images/banner.jpg');
+        background-image: url("../../Images/banner.webp");
         background-repeat: no-repeat;
         background-size: cover;
-        span {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        & div {
+            backdrop-filter: blur(3px);
             width: 100%;
             height: 100%;
+        }
+
+        &-center-side {
+            display: flex;
+            align-items: center;
+        }
+
+        span {
+            
             display: flex;
             flex-direction: column;
             color: $color-text-neutral-2;
-            margin-top: 350px;
 
             h1 {
                 display: flex;
@@ -28,8 +41,52 @@
             }
         }
     }
-    
-    &__content {
+
+    &__description {
+        display: flex;
+        flex-direction: column;
         padding: 0 10%;
+        background-color: $color-menu-item-hover;
+        color: $color-text-neutral-2;
+
+        &-row {
+            display: flex;
+            width: 100%;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+            border-bottom: 1px solid $color-border;
+            padding: 20px 0;
+
+            &-left-side {
+                display: flex;
+                justify-content: flex-end;
+                flex-direction: column;
+                align-items: flex-end;
+                padding-right: 20px;
+                max-width: 50%;
+            }
+    
+            &-right-side {
+                display: flex;
+                justify-content: flex-start;
+                flex-direction: column;
+                padding-left: 20px;
+                max-width: 50%;
+            }
+
+            img {
+                width: 100%;
+                height: 100%;
+                max-width: 300px;
+                max-height: 300px;
+                border-radius: 50%;
+                transition: .7s;
+            }
+
+            img:hover {
+                transform: scale3d(1.1, 1.1, 1.1);
+            }
+        }
     }
 }

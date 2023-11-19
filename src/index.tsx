@@ -8,6 +8,8 @@ import About from './Views/About';
 import Contact from './Views/Contact';
 import FundraisingPage from './Components/Fundraising/FundraisingPage';
 import {TMenuUtils} from './Utils/MenuUtils';
+import Fundraisings from './Views/Fundraisings';
+import { FundraisingsUtils } from './Utils/FundraisingUtils';
 
 const root = ReactDOM.createRoot(document.getElementById('root')!);
 document.addEventListener('scroll', () => {TMenuUtils.changeMenuBackgroundOnScroll()});
@@ -20,6 +22,7 @@ root.render(
         <Route path="/about" element={<About />} />
         <Route path='/contact' element={<Contact />} />
         <Route path='/fundraisings/fundraising' element={<FundraisingPage />} />
+        <Route path='/fundraisings' element={<Fundraisings fundraisingList={FundraisingsUtils.fundraisings} pageTitle='Zbiórki' />} />
       </Routes>
     </BrowserRouter>
   </div>

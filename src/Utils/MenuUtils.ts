@@ -24,6 +24,12 @@ export class TMenuUtils {
             classList: 'nav-link',
             href: '/contact',
             name: 'contact-site'
+        },
+        {
+            title: 'Zbiórki',
+            classList: 'nav-link',
+            href: '/fundraisings',
+            name: 'fundraisings-site'
         }
     ];
 

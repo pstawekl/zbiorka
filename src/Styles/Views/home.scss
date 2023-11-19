@@ -1,10 +1,13 @@
 @import "../variables.scss";
+@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap");
+@import '../key-frames.scss';
 
 .ia-home-page {
     &__banner {
         overflow: hidden;
         height: 800px;
         background-image: url("../../Images/banner.webp");
+        background-attachment: fixed;
         background-repeat: no-repeat;
         background-size: cover;
         display: flex;
@@ -12,32 +15,38 @@
         justify-content: center;
 
         & div {
-            backdrop-filter: blur(3px);
-            width: 100%;
-            height: 100%;
-        }
-
-        &-center-side {
-            display: flex;
-            align-items: center;
-        }
-
-        span {
-            
             display: flex;
             flex-direction: column;
-            color: $color-text-neutral-2;
+            justify-content: center;
+            align-items: flex-start;
+            height: 100%;
+            padding: 20px 20px;
+            color: $color-text-neutral-2 !important;
+            text-align: justify;
+            gap: 10px;
+            letter-spacing: 2px;
 
-            h1 {
-                display: flex;
-                width: 100%;
-                justify-content: center;
+            .title {
+                white-space: pre;
+                font-family: "Bebas Neue", sans-serif;
+                font-size: 64px;
+                animation: fadeIn ease-in-out .5s forwards;
             }
+            p {
+                max-width: 400px;
+                background-color: black;
+                padding: 20px;
+                border-radius: 5px;
+                animation: fadeIn ease-in-out .5s forwards;
+            }
+        }
 
-            h3 {
-                display: flex;
-                width: 100%;
-                justify-content: center;
+        .btn-show-more {
+            transition: 0.7s;
+            animation: fadeIn ease-in-out .5s forwards;
+
+            &:hover {
+                background-color: rgb(61, 61, 61) !important;
             }
         }
     }
@@ -45,8 +54,7 @@
     &__description {
         display: flex;
         flex-direction: column;
-        padding: 0 10%;
-        background-color: $color-menu-item-hover;
+        background-color: black;
         color: $color-text-neutral-2;
 
         &-row {
@@ -57,6 +65,7 @@
             align-items: center;
             border-bottom: 1px solid $color-border;
             padding: 20px 0;
+            margin-top: 40px;
 
             &-left-side {
                 display: flex;
@@ -66,7 +75,7 @@
                 padding-right: 20px;
                 max-width: 50%;
             }
-    
+
             &-right-side {
                 display: flex;
                 justify-content: flex-start;
@@ -77,15 +86,18 @@
 
             img {
                 width: 100%;
-                height: 100%;
-                max-width: 300px;
-                max-height: 300px;
+                height: auto;
+                max-width: 200px;
                 border-radius: 50%;
-                transition: .7s;
+                transition: 0.5s;
+                filter: grayscale(100%);
+                opacity: 0;
+                animation: fadeIn 1s ease-in-out forwards;
             }
 
             img:hover {
                 transform: scale3d(1.1, 1.1, 1.1);
+                filter: grayscale(0);
             }
         }
     }

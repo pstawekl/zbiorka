@@ -7,12 +7,13 @@ import Home from './Views/Home';
 import About from './Views/About';
 import Contact from './Views/Contact';
 import FundraisingPage from './Components/Fundraising/FundraisingPage';
-import {TMenuUtils} from './Utils/MenuUtils';
+import { TMenuUtils } from './Utils/MenuUtils';
 import Fundraisings from './Views/Fundraisings';
 import { FundraisingsUtils } from './Utils/FundraisingUtils';
+import 'bulma/css/bulma.min.css';
 
 const root = ReactDOM.createRoot(document.getElementById('root')!);
-document.addEventListener('scroll', () => {TMenuUtils.changeMenuBackgroundOnScroll()});
+document.addEventListener('scroll', () => { TMenuUtils.changeMenuBackgroundOnScroll() });
 root.render(
   <div className='ia-page'>
     <MenuNavbar />
@@ -25,6 +26,13 @@ root.render(
         <Route path='/fundraisings' element={<Fundraisings fundraisingList={FundraisingsUtils.fundraisings} pageTitle='Zbiórki' />} />
       </Routes>
     </BrowserRouter>
+    <footer className="footer">
+      <div className="content has-text-centered">
+        <p>
+          Website <strong>bandażedlaukrainy</strong> <a href="https://www.interactive.net.pl">by Interactive</a>
+        </p>
+      </div>
+    </footer>
   </div>
 );
 

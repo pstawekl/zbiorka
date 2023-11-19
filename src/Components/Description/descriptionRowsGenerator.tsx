@@ -7,32 +7,32 @@ export interface DescriptionRowsGeneratorProps {
 export default function DescriptionRowsGenerator(props: DescriptionRowsGeneratorProps): JSX.Element {
     const TAGNAME = "ia-home-page";
     return (
-        <div>
+        <div className="container">
             {
                 props.descriptionRows.map((row) => {
 
                     if (row.imageSide == DescriptionImageSide.Right)
                         return (
-                            <div className={TAGNAME + "__description-row"}>
+                            <div className={TAGNAME + "__description-row hero-body"}>
                                 <div className={TAGNAME + "__description-row-left-side"}>
-                                    <h1>{row.title}</h1>
-                                    <p>{row.description}</p>
+                                    <h1 className="title has-text-white">{row.title}</h1>
+                                    <p className="subtitle has-text-white has-text-right">{row.description}</p>
                                 </div>
                                 <div className={TAGNAME + "__description-row-right-side"}>
                                     <img src={row.image} alt={row.imageAlt} />
                                 </div>
                             </div>
-
+ 
                         )
                     else
                         return (
-                            <div className={TAGNAME + "__description-row"}>
+                            <div className={TAGNAME + "__description-row hero-body"}>
                                 <div className={TAGNAME + "__description-row-left-side"}>
                                     <img src={row.image} alt={row.imageAlt} />
                                 </div>
                                 <div className={TAGNAME + "__description-row-right-side"}>
-                                    <h1>{row.title}</h1>
-                                    <p>{row.description}</p>
+                                    <h1 className="title has-text-white">{row.title}</h1>
+                                    <p className="subtitle has-text-white has-text-left">{row.description}</p>
                                 </div>
                             </div>
                         )

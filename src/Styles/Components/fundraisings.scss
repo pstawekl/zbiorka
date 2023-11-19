@@ -1,8 +1,9 @@
-@import '../variables.scss';
+@import "../variables.scss";
+@import "../key-frames.scss";
 
 .ia-fundraisings-cards {
     max-width: 100%;
-    margin: 40px 5% 0;
+    margin: 60px 0;
 
     &__header {
         width: 100%;
@@ -25,7 +26,6 @@
         &.disabled {
             display: none;
         }
-
     }
 
     &__content {
@@ -33,34 +33,37 @@
         display: flex;
         flex-direction: column;
         flex-wrap: nowrap;
-        
 
         .ia-dynamic-fundraising-cards {
             display: flex;
             flex-wrap: wrap;
             justify-content: center;
+            animation: fadeIn ease-in-out 0.5s forwards;
 
             &__fundraising {
                 margin: 10px 30px;
-                border-radius: 8px;
-                background-color: #202020;
-                padding: 20px;
-                transition: 0.6s;
+                background-color: black;
+                transition: 0.5s;
+                min-width: 500px;
+
+                img {
+                    transition: 0.5s;
+                }
 
                 &:hover {
                     background-color: #606060;
+                    transform: scale3d(1.1, 1.1, 1.1);
                     img {
                         filter: grayscale(1);
                     }
                 }
-                
+
                 a {
                     color: $color-text-neutral-2 !important;
                     text-decoration: none;
                 }
 
                 &-progress-bar {
-                    
                 }
             }
         }

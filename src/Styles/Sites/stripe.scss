@@ -1,0 +1,15 @@
+.StripeElement {
+    display: flex;
+    flex-direction: column;
+    margin: 20px 0;
+
+    .ElementsApp.is-empty {
+        display: flex;
+        flex-direction: column;
+        
+        .CardField {
+            display: flex;
+            flex-direction: column;
+        }
+    }
+}

@@ -1,7 +1,7 @@
 import { FundraisingsUtils } from "../Utils/FundraisingUtils";
 import Fundraisings from "./Fundraisings";
 import '../Styles/Views/home.scss';
-import DescriptionRowsGenerator from "../Components/Description/descriptionRowsGenerator";
+import DescriptionRowsGenerator from "../Components/Description/DescriptionRowsGenerator";
 import { DescriptionUtils } from "../Utils/DescriptionUtils";
 
 export default function Home() {
@@ -33,8 +33,8 @@ export default function Home() {
             <div className={TAGNAME + "__description"}>
                 <DescriptionRowsGenerator descriptionRows={DescriptionUtils.descriptionList} />
             </div>
-            <div className={TAGNAME + "__content"}>
-                <Fundraisings fundraisingList={FundraisingsUtils.fundraisings} pageTitle={""} />
+            <div className={TAGNAME + "__content container is-fluid"}>
+                <Fundraisings fundraisingList={FundraisingsUtils.fundraisings} pageTitle={"Polecane zbiórki"} />
             </div>
         </div>
     )

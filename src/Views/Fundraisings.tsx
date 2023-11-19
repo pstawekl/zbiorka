@@ -13,8 +13,8 @@ export default function Fundraisings(props: FundraisingsProps) {
     return (
         <div className={TAGNAME}>
             <div className={TAGNAME + "__header"}>
-                <h3>Aktualne zbiórki</h3>
-                <div className={TAGNAME + "__fundraisings-count" + (props.fundraisingList.length == 0 ? " disabled" : "")}>{props.fundraisingList.length}</div>
+                <h3 className="title">{props.pageTitle}</h3>
+                <span className={TAGNAME + "__fundraisings-count tag is-black" + (props.fundraisingList.length == 0 ? " disabled" : "")}>{props.fundraisingList.length}</span>
             </div>
             <div className={TAGNAME + "__content"}>
                 <DynamicFundraisingsCardsRenderer fundraisings={props.fundraisingList} />

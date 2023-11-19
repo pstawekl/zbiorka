@@ -46,7 +46,7 @@ export default function FundraisingPage() {
         default:
             return (
                 <div className={TAGNAME}>
-                    <div className={TAGNAME + "__header"}>
+                    <div className={TAGNAME + "__header title"}>
                         <h1 className={TAGNAME + "__title"}>{fundraising.title}</h1>
                     </div>
                     <div className={TAGNAME + "__image"}>

@@ -1,0 +1,66 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400&display=swap');
+
+.donation-form {
+    font-family: 'Roboto';
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+    background-image: url('./../../Assets/Images/banner.webp');
+    background-size: cover;
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(2em);
+    overflow: hidden;
+    background-position-x: center;
+    color: white;
+
+    .donation-form-content {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        align-items: center;
+        align-content: end;
+        overflow: hidden;
+        max-width: 1000px;
+        padding-bottom: 10vh;
+    }
+
+    &-title {
+        font-size: 24px;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+    }
+
+    &-subtitle {
+        justify-content: center;
+        font-size: 18px;
+        margin-bottom: 10px;
+        text-align: center;
+    }
+
+    img {
+        height: 10%;
+    }
+
+    input {
+        display: flex;
+        max-width: 500px;
+        margin: 0 0 20px 0;
+    }
+
+    button {
+        border-radius: 25px;
+        border: none;
+        padding: 5px 20px;
+        background-color: rgb(87, 39, 0);
+        color: white;
+
+        :hover {
+            background-color: rgb(153, 153, 153);
+            color: white;
+        }
+    }
+
+}

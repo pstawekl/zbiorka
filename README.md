@@ -15,5 +15,4 @@ Tworzenie wartswy frontendowej, która będzie przygotowana do wpięcia do API.
 ## Twórcy
 
 Jakub Stawski
-Łukasz Soboń
 
